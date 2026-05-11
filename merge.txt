@@ -1,0 +1,8 @@
+Merge adalah proses menggabungkan riwayat (commit) dan perubahan kode dari satu branch ke branch lainnya. Biasanya dilakukan saat kamu sudah selesai mengerjakan fitur di branch baru dan ingin memasukkannya ke branch utama (main).
+
+Tiga Jenis Merge yang Sering Dipakai:
+Fast-Forward Merge
+
+Kondisi: Branch main tidak punya commit baru sejak kamu membuat branch fitur.
+
+Hasil: Git hanya perlu "memajukan" penanda branch main ke posisi terbaru branch fiturmmu. Sangat bersih dan cepat.
