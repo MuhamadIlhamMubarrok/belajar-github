@@ -1,0 +1,96 @@
+Berikut rangkuman singkat tapi jelas tentang **Git Remote Repository** 👇
+
+---
+
+## 🌐 Apa itu Remote Repository?
+
+**Remote repository** adalah repo Git yang berada di internet / server (bukan di komputer kamu), biasanya di platform seperti GitHub, GitLab, atau Bitbucket.
+
+Fungsinya:
+
+* Menyimpan project secara online
+* Kolaborasi dengan tim
+* Backup project
+
+---
+
+## 🔗 Hubungan Local & Remote
+
+* **Local repo** → di komputer kamu
+* **Remote repo** → di internet
+  👉 Git jadi penghubung antara keduanya
+
+---
+
+## ⚙️ Perintah Penting Remote
+
+### 1. Menambahkan Remote
+
+```bash
+git remote add origin https://github.com/user/repo.git
+```
+
+➡️ Menghubungkan repo lokal ke repo online
+
+---
+
+### 2. Melihat Remote
+
+```bash
+git remote -v
+```
+
+➡️ Menampilkan daftar remote
+
+---
+
+### 3. Mengirim ke Remote (Push)
+
+```bash
+git push origin main
+```
+
+➡️ Upload perubahan ke GitHub
+
+---
+
+### 4. Mengambil dari Remote
+
+```bash
+git pull origin main
+```
+
+➡️ Mengambil + menggabungkan perubahan terbaru
+
+---
+
+### 5. Mengambil saja (tanpa merge)
+
+```bash
+git fetch
+```
+
+➡️ Ambil update tapi belum digabung
+
+---
+
+## 🧠 Istilah Penting
+
+* **origin** → nama default remote
+* **main / master** → branch utama
+* **clone** → ambil repo dari remote ke lokal
+* **push** → kirim ke remote
+* **pull** → ambil dari remote
+
+---
+
+## 🔥 Intinya
+
+Remote repository itu:
+👉 Tempat nyimpen project online
+👉 Buat kerja bareng tim
+👉 Sinkronisasi antara komputer kamu & server
+
+---
+
+Kalau mau, gue bisa buatin **contoh alur dari awal (clone → edit → push)** biar makin kebayang 👍
