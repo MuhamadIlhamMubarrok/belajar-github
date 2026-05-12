@@ -1,1 +1,89 @@
-Halo Bang Ilham, saya Garuda. Ini file latihan PR saya.
+DOKUMEN MATERI: GIT REMOTE MASTERCLASS
+Berdasarkan Materi: Eko Kurniawan Khannedy (Programmer Zaman Now)
+
+Bagian 1: Judul & Pengantar
+Git Remote Masterclass: Kolaborasi Tanpa Batas dengan Git Server
+Materi ringkas mengenai pengelolaan repositori terpusat untuk tim profesional.
+
+Bagian 2: Mengenal Pemateri
+Eko Kurniawan Khannedy
+Profil: Technical Architect di salah satu e-commerce terbesar di Indonesia.
+Pengalaman: 10+ tahun di industri teknologi.
+Kontribusi: Kreator kanal YouTube "Programmer Zaman Now".
+Kontak:
+Web: www.programmerzamannow.com
+Telegram: @khannedy / t.me/ProgrammerZamanNow
+Email: echo.khannedy@gmail.com
+Bagian 3: Apa itu Git Remote? (Analogi: Buku Catatan & Perpustakaan)
+Bayangkan Anda sedang menulis buku. Repositori Lokal adalah buku catatan pribadi di meja Anda. Git Remote adalah perpustakaan umum di mana Anda menyimpan salinan buku tersebut agar orang lain bisa membaca dan ikut menulis.
+Distributed VCS (Kerja Offline): Anda bisa menulis di buku catatan Anda kapan saja tanpa harus ke perpustakaan. Semua riwayat coretan ada di tangan Anda.
+Centralized Server (Titik Temu): Perpustakaan menjadi tempat semua orang mengumpulkan bab-bab baru agar ceritanya tetap nyambung.
+Koneksi: Anda hanya perlu bensin (internet) saat mau pergi ke perpustakaan untuk menaruh tulisan baru (Push) atau menyalin tulisan orang lain (Pull).
+Bagian 4: Git Server (Analogi: Pilihan Gedung Perpustakaan)
+Ada berbagai "gedung perpustakaan" yang bisa Anda pilih untuk menaruh buku Anda:
+GitHub: Perpustakaan paling ramai di pusat kota. Tempat berkumpulnya semua penulis dunia (Open Source).
+GitLab: Perpustakaan modern yang punya mesin cetak otomatis dan editor internal (CI/CD).
+Bitbucket: Perpustakaan khusus perkantoran yang terhubung langsung dengan sistem manajemen tugas (Jira).
+Bagian 5: Keamanan dengan SSH (Analogi: Kunci & Gembok)
+Agar tidak sembarang orang bisa mengubah buku Anda di perpustakaan, Anda butuh sistem keamanan SSH.
+SSH Key: Bayangkan sebuah gembok dan kuncinya.
+Private Key (id_rsa): Ini adalah Kunci Fisik yang Anda pegang. Jangan pernah diberikan ke siapa pun!
+Public Key (id_rsa.pub): Ini adalah Lubang Gembok yang Anda pasang di gerbang GitHub. Hanya "Kunci Fisik" Anda yang bisa membukanya.
+Perintah: ssh-keygen -t rsa untuk membuat pasangan kunci tersebut.
+
+Cara buat :
+ - Buka CMD
+ - Tuliskan ssh-keygen
+ - setelah tergenerate ssh-keynya lalu copy ke.pub  tersebut
+ - lalu buka github.com/settings/keys
+ - tekan add new key
+ - masukkan tag dan keynya
+ - selesai!
+	
+Bagian 6: Perintah Dasar Manajemen Remote
+Menghubungkan buku di meja Anda dengan perpustakaan tertentu.
+Menambah Remote: git remote add origin [url] (Mendaftarkan alamat perpustakaan ke buku Anda).
+Melihat Remote: git remote -v (Cek alamat mana saja yang terhubung).
+git remote : untuk melihat variable dari sebuah git url
+git remote get-url nama : untuk melihat url secara detail
+git remote rm nama : menghapus variabel
+git remote add nama : menambah variabel
+Bagian 7 & 8: Push & Clone
+Push (Kirim Data): Menyetorkan bab baru dari buku di meja Anda ke perpustakaan.
+git push origin branch_name
+Clone (Unduh Proyek): Memfotokopi seluruh isi buku dari perpustakaan untuk dibawa pulang ke meja Anda karena Anda baru bergabung.
+git clone [url]
+
+git push namaremote localbranch : untuk mengirim perubahan branch ke remote repository dengan nama branch sama.
+git push namaremote localbranch:remotebranch : Untuk mengirim perubahan branch ke remote repository dengan nama branch yang berbeda
+git push origin --all : Jika kita ingin mengirim semua perubahan di semua branch ke remote repository
+git push --delete namaremote namabranch : untuk menghapus branch yang ada di remote repository
+git checkout -b localbranch namaremote/remotebranch : membuat branch dari remote branch
+						
+
+	
+Bagian 9: Fetch vs Pull (Analogi: Intip vs Ambil)
+Git Fetch (Intip): Anda menelepon pustakawan untuk bertanya "Ada bab baru tidak?". Pustakawan bilang "Ada", tapi buku Anda di meja belum berubah.
+git fetch origin
+Git Pull (Ambil & Tempel): Anda langsung mengambil bab baru tersebut dan menempelkannya ke buku Anda di meja.
+git pull origin branch_name
+Hati-hati: Jika Anda dan teman menulis di halaman yang sama, akan terjadi Merge Conflict (bentrok tulisan).
+Git fetch namaremote : untuk melakukan fetch untuk semua branch di repository
+
+
+git fetch namaremote remotebranch :  fetch untuk branch tertentu saja di remote
+Bagian 10: Kolaborasi & Tagging (Analogi: Editor & Label)
+Pull Request (PR): Sebelum tulisan Anda ditempel permanen di buku perpustakaan, Anda minta "Editor" (teman tim) untuk memeriksanya dulu.
+Tag: Memberi label pada buku, misalnya "Edisi Cetak Pertama" atau "Versi 1.0".
+git push origin --tags
+git push namaremote namatag : untuk mengirim tag ke remote repo
+git push namaremote - -tags : untuk mengirim semua tag ke remote repo
+git tag namatag commitId : untuk membuat tag
+Bagian 11: Git Submodule (Analogi: Buku di dalam Buku)
+Anda sedang menulis buku sejarah, tapi di dalamnya ada "Buku Kamus" kecil yang dibuat oleh orang lain. Kamus itu adalah Submodule. Jika kamus itu diperbarui, buku sejarah Anda tinggal memperbarui referensinya saja.
+Bagian 12: Forking Workflow (Analogi: Fotokopi Mandiri)
+Anda ingin mengubah buku milik orang lain di perpustakaan, tapi Anda tidak punya izin coret-coret di sana.
+Fork: Anda memfotokopi buku itu ke "rak pribadi" Anda.
+Modify: Anda coret-coret buku di rak pribadi Anda sendiri.
+Pull Request: Anda lapor ke pemilik asli: "Eh, saya punya revisi bagus di fotokopian saya, mau diambil tidak?".
+
