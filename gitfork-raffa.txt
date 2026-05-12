@@ -1,0 +1,19 @@
+Apa itu Fork?
+Fork adalah menyalin repository orang lain ke akun GitHub sendiri. Ini memungkinkan
+kita untuk memodifikasi kode tanpa mengubah repository asli (upstream).
+
+Alur Kerja Git Fork
+Fork: Copy repo orang lain ke akun kita via browser GitHub
+Clone: Download salinan repo tersebut dari akun kita ke komputer lokal
+Branching: Membuat cabang baru agar pekerjaan lebih rapi dan tidak merusak branch utama
+Push: Mengirim hasil perubahan dari komputer lokal kembali ke GitHub kita
+Pull Request (PR): Meminta pemilik repo asli untuk menarik/menggabungkan perubahan yang kita buat ke repository mereka.
+
+Kapan Menggunakan Fork?
+Biasanya digunakan saat berkontribusi pada proyek open source atau saat
+mengerjakan tugas sekolah/kuliah di mana guru ingin melihat perubahan spesifik dari
+setiap siswa.
+
+Perbedaan Fork vs Clone:
+Fork terjadi di sisi server (GitHub ke GitHub).
+Clone terjadi dari server ke komputer lokal (GitHub ke Laptop).
