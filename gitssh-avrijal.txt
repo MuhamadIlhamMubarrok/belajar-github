@@ -1,0 +1,40 @@
+    SSH (Secure Shell): adalah protokol untuk menghubungkan komputer ke server secara aman melalui internet/jaringan
+
+    Biasanya dipakai untuk:
+
+    login ke server/VPS
+    remote terminal
+    transfer file
+    koneksi GitHub tanpa password HTTPS
+
+    Intinya: “ngontrol komputer lain dari komputer kita dengan aman”
+
+
+    Fungsi SSH
+    1.Remote Server
+    Masuk ke server dari jarak jauh
+
+
+    2.GitHub SSH
+    Push/pull repository tanpa login password terus-menerus.
+
+
+    3.Transfer File
+    Bisa kirim file aman pakai:
+    SCP
+    SFTP
+
+
+    Keamanan SSH memakai:
+    enkripsi
+    SSH Key
+
+
+    Kesimpulan:
+    SSH dipakai untuk koneksi aman antar komputer/server menggunakan enkripsi dan SSH key.
+
+    SSH sangat penting untuk:
+    GitHub
+    VPS
+    DevOps
+    Linux server
