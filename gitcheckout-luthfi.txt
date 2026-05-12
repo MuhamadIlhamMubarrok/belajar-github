@@ -1,0 +1,10 @@
+git checkout adalah perintah untuk menavigasi antar versi yang berbeda dari proyekmu. Kamu bisa menggunakannya untuk berpindah antar branch (cabang) atau melihat kondisi file pada commit tertentu di masa lalu.
+
+Fungsi Utama
+Berpindah Branch: Mengalihkan fokus pengerjaan dari satu cabang ke cabang lain.
+
+Contoh: Kamu sedang di branch main, lalu ingin mengerjakan fitur baru di branch feature-login.
+
+Melihat Commit Lama: Memungkinkan kamu melihat kembali isi proyek pada titik waktu tertentu tanpa menghapus progres terbaru (kondisi ini sering disebut detached HEAD).
+
+Membatalkan Perubahan File: Mengembalikan file ke kondisi terakhir yang sudah di-commit (berguna jika kamu melakukan kesalahan saat coding).
